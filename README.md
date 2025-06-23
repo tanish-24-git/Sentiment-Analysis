@@ -1,5 +1,4 @@
 Sentiment Analysis on Twitter Data 😊😢😐
-
 Overview 🗣️
 This repository contains a sentiment analysis project that classifies Twitter data into positive 😊, negative 😢, or neutral 😐 sentiments using logistic regression with TF-IDF features. Two implementations are provided:
 
@@ -8,33 +7,14 @@ Scikit-Learn Pipeline (sklearn_logics.ipynb) 📊🛠️: A production-ready pip
 
 The project compares these pipelines, achieving 62.65% accuracy for the custom pipeline and 69.84% for the scikit-learn pipeline, demonstrating the trade-offs between learning and efficiency.
 Datasets 📁
-The project uses multiple Twitter sentiment datasets, including a subsampled version of training.1600000.processed.noemoticon.csv (10% sample for efficiency).
-Source: Datasets are publicly available (e.g., from Sentiment140). To replicate:
-
-Download training.1600000.processed.noemoticon.csv.
-Place it in the dataset/ folder.
-Alternatively, preprocess a smaller sample:import pandas as pd
-df = pd.read_csv("dataset/training.1600000.processed.noemoticon.csv", encoding='latin-1')
-df_sample = df.sample(frac=0.1, random_state=42)
-df_sample.to_csv("dataset/training_sampled.csv", index=False)
-
-
-
-Note: Large datasets are ignored via .gitignore. Use Git LFS if tracking large files.
+The project uses publicly available Twitter sentiment datasets for training and evaluation. Large datasets are not included in the repository due to size constraints and are ignored via .gitignore.
 Installation ⚙️
-Clone the repository and set up the environment.
+To set up the environment, install the required packages and NLTK resources.
 
-Clone the Repository:
-git clone https://github.com/tanish-24-git/Sentiment-Analysis.git
-cd Sentiment-Analysis
-
-
-Install Dependencies:Create a virtual environment and install required packages:
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+Install Dependencies:If requirements.txt is available:
 pip install -r requirements.txt
 
-If requirements.txt is unavailable, install manually:
+Otherwise, install manually:
 pip install numpy pandas scikit-learn nltk matplotlib seaborn jupyter
 
 
@@ -44,8 +24,6 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 
-
-Prepare Datasets:Place datasets in the dataset/ folder or use a sampled version as described above.
 
 
 Usage 🚀
@@ -117,7 +95,7 @@ Commit changes (git commit -m "Add YourFeature").
 Push to the branch (git push origin feature/YourFeature).
 Open a pull request.
 
-Please ensure datasets are not committed directly due to size limits. Use Git LFS or provide preprocessing scripts.
+Please ensure large files are not committed directly due to size limits. Use Git LFS or provide preprocessing scripts.
 License 📜
 This project is licensed under the MIT License. See LICENSE for details.
 Contact 📬
