@@ -5,16 +5,22 @@ Performance Comparison 🗣️
 Custom Pipeline (logics.ipynb) 🐍:
 
 Test Accuracy: 62.65%
+
 Macro F1-Score: 47.30%
+
 Strengths: Transparent, educational, no external ML dependencies.
+
 Weaknesses: Lower accuracy, memory-intensive, no regularization.
 
 
 Scikit-Learn Pipeline (sklearn_logics.ipynb) 📊🛠️:
 
 Test Accuracy: 69.84% (+7.19%)
+
 Macro F1-Score: 63.45% (+16.15%)
+
 Strengths: Efficient, robust (cross-validation, grid search), NLTK preprocessing.
+
 Weaknesses: Moderate accuracy, class imbalance issues.
 
 
